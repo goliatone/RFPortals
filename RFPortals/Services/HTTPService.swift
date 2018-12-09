@@ -2,8 +2,8 @@
 //  HTTPService.swift
 //  RFPortals
 //
-//  Created by Emiliano Burgos on 12/8/18.
-//  Copyright © 2018 Emiliano Burgos. All rights reserved.
+//  Created by goliatone on 12/8/18.
+//  Copyright © 2018 goliatone. All rights reserved.
 //
 
 import Foundation
