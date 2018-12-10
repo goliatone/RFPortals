@@ -10,15 +10,52 @@ import Foundation
 
 class Configuration {
     
-    static var urlComponents: URLComponents {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "open-portals.ngrok.io"
-        components.path = "/open"
-        return components
+    static let scanningActivity: String = "com.goliatone.RFPortals.scanPortals"
+    static var serviceEndpointKey: String = "serviceEndpoint"
+    static var userIdKey: String = "userId"
+    static var beaconUUIDKey: String = "beaconUUID"
+    
+    static var serviceEndpoint: String {
+        get {
+            if (UserDefaults.standard.object(forKey: Configuration.serviceEndpointKey) != nil) {
+                return UserDefaults.standard.string(forKey: Configuration.serviceEndpointKey)!
+            }
+            return ""
+        }
+        
+        set(value) {
+            UserDefaults.standard.set(value, forKey: Configuration.serviceEndpointKey)
+        }
     }
     
-    static let userId: String = "B5AB66DB-A91C-43AD-8DFE-732520343F12"
+    static var serviceURL: URL? {
+        return URL(string: Configuration.serviceEndpoint)
+    }
     
-    static let scanningActivity: String = "com.goliatone.RFPortals.scanPortals"
+    static var userId: String {
+        get {
+            
+            if (UserDefaults.standard.object(forKey: Configuration.userIdKey) != nil) {
+                return UserDefaults.standard.string(forKey: Configuration.userIdKey)!
+            }
+            return ""
+        }
+        
+        set(value) {
+            UserDefaults.standard.set(value, forKey: Configuration.userIdKey)
+        }
+    }
+    
+    static var beaconUUID: String {
+        get {
+            if (UserDefaults.standard.object(forKey: Configuration.beaconUUIDKey) != nil) {
+                return UserDefaults.standard.string(forKey: Configuration.beaconUUIDKey)!
+            }
+            return ""
+        }
+        
+        set(value) {
+            UserDefaults.standard.set(value, forKey: Configuration.beaconUUIDKey)
+        }
+    }
 }
