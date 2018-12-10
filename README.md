@@ -10,7 +10,7 @@ Proof of concept application for remote Access Control using:
 
 * Added `NSUserActivityTypes` with value `com.goliatone.RFPortals.scanPortals`
 * Added `Privacy - NFC Scan Usage Description`
-
+* Added `Privacy - Camera Usage Description`
 
 ### TODO
 
