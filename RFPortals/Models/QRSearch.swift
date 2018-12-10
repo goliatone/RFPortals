@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct QRSearch {
+    var tag:Int
+    var result: String
+}
