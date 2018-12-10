@@ -23,8 +23,8 @@ class Configuration {
             return ""
         }
         
-        set(value) {
-            UserDefaults.standard.set(value, forKey: Configuration.serviceEndpointKey)
+        set {
+            UserDefaults.standard.set(newValue, forKey: Configuration.serviceEndpointKey)
         }
     }
     
@@ -41,8 +41,8 @@ class Configuration {
             return ""
         }
         
-        set(value) {
-            UserDefaults.standard.set(value, forKey: Configuration.userIdKey)
+        set {
+            UserDefaults.standard.set(newValue, forKey: Configuration.userIdKey)
         }
     }
     
@@ -54,8 +54,8 @@ class Configuration {
             return ""
         }
         
-        set(value) {
-            UserDefaults.standard.set(value, forKey: Configuration.beaconUUIDKey)
+        set {
+            UserDefaults.standard.set(newValue, forKey: Configuration.beaconUUIDKey)
         }
     }
 }
