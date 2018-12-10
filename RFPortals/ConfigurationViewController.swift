@@ -17,6 +17,20 @@ class ConfigurationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //init toolbar for textfields
+        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
+        //create left side empty space so that done button set on right side
+        let flexSpace = UIBarButtonItem(barButtonSystemItem:    .flexibleSpace, target: nil, action: nil)
+        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        toolbar.setItems([flexSpace, doneBtn], animated: false)
+        toolbar.sizeToFit()
+        
+        //setting toolbar as inputAccessoryView
+        self.urlTextField.inputAccessoryView = toolbar
+        self.userIdTextField.inputAccessoryView = toolbar
+        self.beaconUUIDTextField.inputAccessoryView = toolbar
+        
         renderView()
     }
     
@@ -24,6 +38,10 @@ class ConfigurationViewController: UIViewController {
         urlTextField.text = Configuration.serviceEndpoint
         userIdTextField.text = Configuration.userId
         beaconUUIDTextField.text = Configuration.beaconUUID
+    }
+    
+    @objc func doneButtonAction() {
+        self.view.endEditing(true)
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
