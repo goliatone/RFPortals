@@ -51,16 +51,3 @@ class HTTPService {
         task.resume()
     }
 }
-
-
-struct OpenPortalRequest: Codable {
-    var userId: String
-    var portalAlias: String
-    var timestamp: Int
-    
-    private enum CodingKeys: String, CodingKey {
-        case userId = "user_id"
-        case portalAlias = "portal_alias"
-        case timestamp
-    }
-}
