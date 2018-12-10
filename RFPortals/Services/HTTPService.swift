@@ -12,9 +12,7 @@ class HTTPService {
     static var shared = HTTPService()
     
     func requestAccessToPortalById(openRequest: OpenPortalRequest, completion: ((Error?)-> Void)?) {
-        let urlComponents = Configuration.urlComponents
-        
-        guard let url = urlComponents.url else {
+        guard let url = Configuration.serviceURL else {
             fatalError("Could not create URL")
         }
         
