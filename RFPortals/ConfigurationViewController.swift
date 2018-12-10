@@ -17,6 +17,13 @@ class ConfigurationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        renderView()
+    }
+    
+    func renderView() {
+        urlTextField.text = Configuration.serviceEndpoint
+        userIdTextField.text = Configuration.userId
+        beaconUUIDTextField.text = Configuration.beaconUUID
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
@@ -41,15 +48,18 @@ class ConfigurationViewController: UIViewController {
 extension ConfigurationViewController: QRScannerDelegate {
     func onCodeDetected(search: QRSearch) {
         print("we have code", search)
+        
         switch search.tag {
         case 1:
-            urlTextField.text = search.result
+            Configuration.serviceEndpoint = search.result
         case 2:
-            userIdTextField.text = search.result
+            Configuration.userId = search.result
         case 3:
-            beaconUUIDTextField.text = search.result
+            Configuration.beaconUUID = search.result
         default:
             print("we dont know")
         }
+        
+        renderView()
     }
 }
