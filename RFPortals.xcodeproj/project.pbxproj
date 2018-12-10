@@ -22,6 +22,7 @@
 		2689EA8A21BCC59F00468112 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689EA8921BCC59F00468112 /* ApplicationViewController.swift */; };
 		2689EA8C21BDBEAF00468112 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689EA8B21BDBEAF00468112 /* QRScannerViewController.swift */; };
 		2689EA8F21BE017C00468112 /* QRSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689EA8E21BE017C00468112 /* QRSearch.swift */; };
+		2689EA9121BE1B2400468112 /* OpenPortalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2689EA9021BE1B2400468112 /* OpenPortalRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		2689EA8921BCC59F00468112 /* ApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
 		2689EA8B21BDBEAF00468112 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		2689EA8E21BE017C00468112 /* QRSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRSearch.swift; sourceTree = "<group>"; };
+		2689EA9021BE1B2400468112 /* OpenPortalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPortalRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				2689EA8E21BE017C00468112 /* QRSearch.swift */,
+				2689EA9021BE1B2400468112 /* OpenPortalRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				2689EA8A21BCC59F00468112 /* ApplicationViewController.swift in Sources */,
 				2689EA8221BCAD4900468112 /* NSDate+timestamp.swift in Sources */,
 				2689EA7921BCABD300468112 /* TableViewCell.swift in Sources */,
+				2689EA9121BE1B2400468112 /* OpenPortalRequest.swift in Sources */,
 				2689EA7F21BCACF600468112 /* HTTPService.swift in Sources */,
 				2689EA8421BCAF9E00468112 /* NFCNDEFPayload+stringValue.swift in Sources */,
 				2689EA6421BCA1DB00468112 /* AppDelegate.swift in Sources */,
